@@ -1,0 +1,41 @@
+print("Program Menghitung Gaji Karyawan")
+print("................................")
+
+Nama = input("Masukan Nama Karyawan : ")
+NIK = input("Masukan NIK Karyawan : ")
+
+Masa_Kerja_input = input("Masukan Masa Kerja Karyawan (contoh: 7 atau '7 tahun'): ")
+Masa_Kerja = int(Masa_Kerja_input.split()[0])   # ambil angka pertama
+
+Status_Karyawan = input("Masukan status Karyawan : ")
+Status_Hubungan = input("Masukan Status Hubungan Karyawan : ")
+
+Gaji_Pokok_input = input("Masukan Gaji Pokok Karyawan (contoh: 3000000 atau 'Rp. 3000000'): ")
+Gaji_Pokok = float(Gaji_Pokok_input.replace("Rp.", "").replace(" ", ""))
+
+Bonus = 0
+Tunjangan = 0
+Uang_Transport = 0
+
+if Masa_Kerja > 5:
+    Bonus = 0.15 * Gaji_Pokok
+
+if Status_Karyawan.lower() == "tetap":
+    Uang_Transport = 50000
+
+if Status_Hubungan.lower() == "menikah":
+    Tunjangan = 0.10 * Gaji_Pokok
+
+Gaji_Bersih = Gaji_Pokok + Bonus + Tunjangan + Uang_Transport
+
+print("\n....Rincian Gaji Karyawan .... ")
+print(f"Nama karyawan     : {Nama}")
+print(f"NIK karyawan      : {NIK}")
+print(f"Masa Kerja        : {Masa_Kerja} tahun")
+print(f"Status Karyawan   : {Status_Karyawan}")
+print(f"Status Hubungan   : {Status_Hubungan}")
+print(f"Gaji Pokok        : Rp. {Gaji_Pokok:,.0f}")
+print(f"Bonus             : Rp. {Bonus:,.0f}")
+print(f"Tunjangan         : Rp. {Tunjangan:,.0f}")
+print(f"Uang Transport    : Rp. {Uang_Transport:,.0f}")
+print(f"Gaji Bersih       : Rp. {Gaji_Bersih:,.0f}")

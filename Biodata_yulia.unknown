@@ -1,0 +1,18 @@
+def run():
+    nama = input("Masukan Nama Anda : ")
+    Alamat = input ("masukan Alamat Anda : ")
+    Usia = input("Masukan usia anda: ")
+    nohp = input("Masukan Nomor Hp anda: ")
+    situs = input("Masukan URL Situs Anda: ")
+
+    print("=== TEKNO CLARITY - HTTPS://TEKNOLARITY.COM ===")
+    print("Berikut ini adalah biodata yang anda masukan : ")
+    print("Nama anda adalah " + nama)
+    print("Alamat anda adalah " + Alamat)
+    print("Usia anda adalah " + Usia)
+    print("Nomor HP anda adalah " + nohp)
+    print("URL situs anda adalah " + situs)
+
+
+if __name__ == "__main__":
+    run()
